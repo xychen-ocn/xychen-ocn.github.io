@@ -241,6 +241,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-remote-theme
 
 # mimic GitHub Pages with --safe
 whitelist:
