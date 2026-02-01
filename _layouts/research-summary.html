@@ -1,0 +1,79 @@
+---
+layout: single
+---
+
+{% assign category_name = page.category | strip %}
+
+{% if page.back_url %}
+  <a href="{{ page.back_url }}" class="btn btn--inverse btn--small">
+    ← {{ page.back_label | default: "Back" }}
+  </a>
+{% endif %}
+
+<!-- ======= Custom Summary ======= -->
+  {{ content }}
+
+
+<!-- ======= Publications ======= -->
+<hr>
+<h2>Publications</h2>
+
+{% assign pubs = "" | split: "" %}
+{% for pub in site.publications %}
+  {% if pub.category and pub.category == category_name %}
+    {% assign pubs = pubs | push: pub %}
+  {% endif %}
+{% endfor %}
+
+{% assign pubs = pubs | sort: "year" | reverse %}
+
+<ul>
+{% for pub in pubs %}
+  <li>
+    {{ pub.authors }} ({{ pub.year }}).
+    <em>{{ pub.title }}</em>.
+    {{ pub.journal }}.
+    {% if pub.doi %}
+      <a href="{{ pub.doi }}" target="_blank" rel="noopener noreferrer">[DOI]</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+{% if page.show_talks != false %}
+<!-- ======= Talks ======= -->
+{% if site.talks %}
+<hr>
+<h2>Talks</h2>
+
+{% assign talks = "" | split: "" %}
+{% for talk in site.talks %}
+  {% if talk.category and talk.category == category_name %}
+    {% assign talks = talks | push: talk %}
+  {% endif %}
+{% endfor %}
+
+{% assign talks = talks | sort: "date" | reverse %}
+
+{% for talk in talks %}
+  <p>
+    {{ talk.date | date: "%Y-%m-%d" }}:
+    <strong>{{ talk.title }}</strong>,
+    {{ talk.venue }}, {{ talk.location }}.
+    {% if talk.recording %}
+      <a href="{{ talk.recording }}" target="_blank" rel="noopener noreferrer">[watch here]</a>
+    {% endif %}
+    {% if talk.note %}
+      (<em>{{ talk.note }}</em>)
+    {% endif %}
+  </p>
+{% endfor %}
+{% endif %}
+
+{% if page.back_url %}
+  <a href="{{ page.back_url }}" class="btn btn--inverse btn--small">
+    ← {{ page.back_label | default: "Back" }}
+  </a>
+{% endif %}
+
+{% endif %}

@@ -1,0 +1,45 @@
+---
+layout: single
+---
+
+{% assign category_name = page.category %}
+
+<!-- ======= PAGE INTRO / SUMMARY ======= -->
+{{ content }}
+
+
+<!-- ======= Full Publications List ======= -->
+<hr>
+<h2>Publications</h2>
+<ul>
+{% for pub in pubs %}
+  <li>
+    {{ pub.authors }} ({{ pub.year }}). <em>{{ pub.title }}</em>. {{ pub.journal }}. 
+    {% if pub.doi %}
+      <a href="{{ pub.doi }}" target="_blank" rel="noopener noreferrer">[DOI]</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+{% if page.show_talks != false %}
+<!-- ======= Talks Section (Embedded Slides) ======= -->
+<hr>
+<h2>Talks</h2>
+{% assign talks = site.talks | where: "category", category_name | sort: "date" | reverse %}
+{% for talk in talks %}
+  <div class="talk mb-4">
+    <p>
+      {{ talk.date | date: "%Y-%m-%d" }}: <strong>{{ talk.title }}</strong>, {{ talk.venue }}, {{ talk.location }}.
+    </p>
+    {% if talk.slides %}
+      <!-- Embed slides read-only -->
+      <div class="embed-responsive embed-responsive-16by9 mb-2">
+        <iframe src="{{ talk.slides }}" frameborder="0" width="960" height="569" allowfullscreen="true" 
+                mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      </div>
+      <p><em>Slides available for viewing online (no direct download).</em></p>
+    {% endif %}
+  </div>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,110 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.site-subtitle {
+    display: block;
+    font-size: 1.4em; 
+    font-weight: bold;
+}
+
+/* Modern contact form styling */
+.contact-form {
+  background-color: #f8f9fa;      // very light gray
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;                   // space between fields
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: $global-font-family;
+  font-size: $type-size-5;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: $link-color;
+  box-shadow: 0 0 0 3px rgba($link-color, 0.15);
+}
+
+.contact-form button {
+  background-color: $link-color;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: $type-size-6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: darken($link-color, 10%);
+}
+
+.no-title .page__title {
+  display: none; 
+}
+
+.feature-row .feature-row__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centers image and text horizontally */
+  text-align: center;   /* centers text below the image */
+}
+
+.feature-row .feature-row__item img {
+  max-height: 200px;    /* optional: keeps all images the same height */
+  min-height: 100px;
+  object-fit: cover;
+}
+
+.author__bio {
+  max-width: 91%;
+}
+
+/* Center title */
+.page__title {
+  text-align: center;
+}
+
+.page__hero--overlay {
+  background-position: center 45%; /* x y */
+}
+
+/* prevent download banner images */
+.page__hero,
+.page__hero--overlay {
+  pointer-events: none;
+}
+
+/* feature-row settings: uniform images + centered content */
+.feature-row--cards .archive__item-title {
+  text-align: center;
+}
+.feature-row--cards .archive__item-teaser {
+  height: 160px;      // pick your height (200–240 is common)
+  overflow: hidden;   // hide cropped parts
+}
+/* Center the button (anchor is already inline, but keep it safe) */
+.feature-row--cards .archive__item-body  > p {
+  text-align: center;
+}

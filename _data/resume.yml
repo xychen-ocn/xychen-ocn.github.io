@@ -1,0 +1,15 @@
+education:
+  - degree: "M.S. in Computer Science"
+    university: "University Name"
+    dates: "2020 - 2022"
+    details: "Relevant coursework, GPA, etc."
+  - degree: "B.S. in Engineering"
+    university: "Another University"
+    dates: "2016 - 2020"
+experience:
+  - title: "Software Engineer"
+    company: "Tech Corp"
+    dates: "2022 - Present"
+    description: "Developed and maintained web applications..."
+# Add sections for skills, projects, etc.
+
