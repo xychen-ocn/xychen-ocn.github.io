@@ -2,9 +2,9 @@
 layout: research-summary
 classes: no-title
 title: "Storm surge"
-permalink: /research/storm-surge/
+permalink: /Research/storm-surge/
 category: storm-surge
-back_url: /research/
+back_url: /Research/
 back_label: Back to Research Portfolio
 #show_talks: false
 ---

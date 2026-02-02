@@ -3,8 +3,8 @@ layout: research-summary
 classes: no-title
 category: mom-flux
 title: "Air-Sea Momentum Flux "
-permalink: /research/mom-flux/
-back_url: /research/
+permalink: /Research/mom-flux/
+back_url: /Research/
 back_label: Back to Research Portfolio
 #show_talks: false
 ---
