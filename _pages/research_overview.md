@@ -2,7 +2,7 @@
 title: "Research" 
 layout: collection
 classes: wide
-permalink: /Research/
+permalink: /research/
 collection: portfolio
 entries_layout: grid
 author_profile: True

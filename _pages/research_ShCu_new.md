@@ -4,7 +4,7 @@ classes: no-title
 title: "Shallow Convection"
 category: ShCu
 permalink: /Research/ShCu/
-back_url: /Research/
+back_url: /research/
 back_label: Back to Research Portfolio
 ---
 
