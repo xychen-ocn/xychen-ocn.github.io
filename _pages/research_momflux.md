@@ -4,7 +4,7 @@ classes: no-title
 category: mom-flux
 title: "Air-Sea Momentum Flux "
 permalink: /research/mom-flux/
-back_url: /Research/
+back_url: /research/
 back_label: Back to Research Portfolio
 #show_talks: false
 ---

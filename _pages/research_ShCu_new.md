@@ -3,8 +3,8 @@ layout: research-summary
 classes: no-title
 title: "Shallow Convection"
 category: ShCu
-permalink: /Research/ShCu/
-back_url: /Research/
+permalink: /research/ShCu/
+back_url: /research/
 back_label: Back to Research Portfolio
 ---
 
