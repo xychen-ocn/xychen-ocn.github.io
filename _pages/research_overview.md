@@ -15,7 +15,7 @@ feature_row:
     #image_caption: Shallow cumulus clouds over the Atlantic Ocean (credit to Elizabeth Thompson)
     alt: "Research 1"
     title: "Shallow Convection"
-    excerpt: "My current research focuses on finding and understanding ocean's imprints on and interaction with shallow convection, which largely rmains a parameterized process even in km-scale weather and climate models." 
+    excerpt: "My current research focuses on finding and understanding ocean's imprints on and interaction with shallow convection, which largely remains a parameterized process even in km-scale weather and climate models." 
     url: /Research/ShCu/
     btn_label: "Read More"
     btn_class: "btn--info"  # "btn--primary"
